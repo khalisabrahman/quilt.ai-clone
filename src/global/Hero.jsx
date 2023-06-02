@@ -39,10 +39,6 @@ const Hero = () => {
         }}
       >
         <Box
-          direction="up"
-          in={true}
-          mountOnEnter
-          unmountOnExit
           sx={{
             display: "flex",
             flexDirection: "column",
@@ -107,7 +103,7 @@ const Hero = () => {
                 "&:hover": {
                   backgroundColor: '#fff',
                   border: "1px solid #3968ff",
-                  transform: "translateY(-10px)",
+                  transform: "translateY(-5px)",
                   transition: "transform 0.2s ease-in",
                 },
               }}
@@ -129,7 +125,7 @@ const Hero = () => {
                 "&:hover": {
                   border: "1px solid #3968ff",
                   backgroundColor: "#3968ff",
-                  transform: "translateY(-10px)",
+                  transform: "translateY(-5px)",
                   transition: "transform 0.2s ease-in",
                 },
               }}
