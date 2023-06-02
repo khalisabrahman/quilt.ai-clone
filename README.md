@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Check out the landing page. https://quilt-ai-clone.vercel.app/
 
-Please note that the page is not yet responsive.
+Please note that the page is not yet responsive. Only available for desktop size.
 
 ## Available Scripts
 
