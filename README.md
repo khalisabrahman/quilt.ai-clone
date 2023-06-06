@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Check out the landing page. https://quilt-ai-clone.vercel.app/
+
+Please note that the page is not yet responsive. Only available for desktop size.
+
 ## Available Scripts
 
 In the project directory, you can run:
