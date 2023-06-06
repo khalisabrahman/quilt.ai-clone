@@ -5,6 +5,7 @@ import Products from "../global/Products";
 import Dashboard from "../global/Dashboard";
 import RecentArticles from "../global/RecentArticles";
 import Footer from "../global/Footer";
+import Trend from "../global/Trend";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <Products></Products>
       <Dashboard></Dashboard>
       <RecentArticles></RecentArticles>
+      <Trend></Trend>
       <Footer></Footer>
     </Box>
   );

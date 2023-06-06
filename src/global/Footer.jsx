@@ -30,7 +30,11 @@ const Footer = () => {
             width: "100%",
             display: "grid",
             gridTemplateRows: "auto",
-            gridTemplateColumns: "2fr 1fr 1fr 1fr 1fr",
+            gridTemplateColumns: {
+                xs: '1fr',
+                md: "2fr 1fr 1fr 1fr 1fr"
+            },
+            gap: '10px'
           }}
         >
           <Box

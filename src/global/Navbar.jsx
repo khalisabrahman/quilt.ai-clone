@@ -1,4 +1,5 @@
-import { Box, Button } from "@mui/material";
+import { Box, Button, IconButton } from "@mui/material";
+import { MenuOutlined } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
 import logo from "../assets/quilt-logo.png";
 
@@ -8,7 +9,7 @@ const Navbar = () => {
     textTransform: "none",
     fontSize: "15px",
     fontWeight: "bold",
-    borderRadius: '10px',
+    borderRadius: "10px",
     color: "#000000",
     padding: "10px 19px",
     "&:hover": { backgroundColor: "#f0f3ff" },
@@ -25,7 +26,9 @@ const Navbar = () => {
       top="0"
       left="0"
       zIndex="1"
-      sx={{ borderBottom: "1px solid rgba(0, 0, 0, .06)" }}
+      sx={{
+        borderBottom: "1px solid rgba(0, 0, 0, .06)",
+      }}
     >
       <Box
         width="80%"
@@ -44,7 +47,16 @@ const Navbar = () => {
               onClick={() => navigate(`/`)}
             />
           </Box>
-          <Box>
+
+          {/* Desktop navbar */}
+          <Box
+            sx={{
+              display: {
+                xs: "none",
+                lg: "block",
+              },
+            }}
+          >
             <Button variant="text" sx={buttonStyles}>
               Products
             </Button>
@@ -59,16 +71,50 @@ const Navbar = () => {
             </Button>
           </Box>
         </Box>
-        <Box display="flex" sx={{ gap: "10px" }}>
+        <Box
+          display="flex"
+          sx={{
+            gap: "10px",
+            display: {
+              xs: "none",
+              lg: "block",
+            },
+          }}
+        >
           <Button variant="text" sx={buttonStyles}>
             Events
           </Button>
           <Button variant="text" sx={buttonStyles}>
             Quilt Health
           </Button>
-          <Button variant="contained" sx={{ textTransform: "none" , fontSize: '13px', borderRadius: '10px'}}>
+          <Button
+            variant="contained"
+            sx={{
+              textTransform: "none",
+              fontSize: "13px",
+              borderRadius: "10px",
+              "&:hover": {
+                transform: "translateY(-5px)",
+                transition: "transform 0.2s ease-in",
+              },
+            }}
+          >
             Contact Us
           </Button>
+        </Box>
+
+        {/* Mobile navbar */}
+        <Box
+          sx={{
+            display: {
+              xs: "block",
+              lg: "none",
+            },
+          }}
+        >
+          <IconButton sx={{ color: "black" }}>
+            <MenuOutlined />
+          </IconButton>
         </Box>
       </Box>
     </Box>

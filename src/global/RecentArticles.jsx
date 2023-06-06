@@ -63,6 +63,8 @@ const RecentArticles = () => {
           justifyContent="center"
           width="100%"
           columnGap="20px"
+          rowGap="20px"
+          flexWrap="wrap"
           className={`${inView ? "animateSlideIn" : ""} `}
         >
           <Card

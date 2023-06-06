@@ -25,7 +25,6 @@ const Products = () => {
 
   return (
     <Box
-      
       width="100%"
       display="flex"
       justifyContent="center"
@@ -64,19 +63,28 @@ const Products = () => {
           Our Products
         </Typography>
 
-        <Box ref={ref} display="flex" justifyContent="center" width="100%" >
+        <Box
+          ref={ref}
+          display="flex"
+          justifyContent="center"
+          width="100%"
+          sx={{ flexWrap: { xs: "wrap", md: "nowrap" } }}
+        >
           {inView && (
             <Box
               className={`${inView ? "animateSlideIn" : "fade-in"} `}
               onMouseOver={handleMouseOver("1")}
               onMouseOut={handleMouseOut}
-              width="50%"
               sx={{
                 borderRadius: "15px",
                 padding: "45px",
                 backgroundColor: "#fff",
                 boxShadow: "1px 1px 6px #b8b8b8",
                 margin: "10px",
+                width: {
+                  xs: "100%",
+                  md: "50%",
+                },
               }}
             >
               <Typography
@@ -146,13 +154,16 @@ const Products = () => {
               className={`${inView ? "animateSlideIn" : ""} `}
               onMouseOver={handleMouseOver("2")}
               onMouseOut={handleMouseOut}
-              width="50%"
               sx={{
                 borderRadius: "15px",
                 padding: "45px",
                 backgroundColor: "#fff",
                 boxShadow: "1px 1px 6px #b8b8b8",
                 margin: "10px",
+                width: {
+                  xs: "100%",
+                  md: "50%",
+                },
               }}
             >
               <Typography
